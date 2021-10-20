@@ -1,7 +1,6 @@
 (Do not display this in the rendered blob to see the content properly)
 
-Write a program that reads a graph (from its input) and prints, either “This graph is not Eulerian.” or an Eulerian circuit of the graph (depending whether or not the
-graph is Eulerian).
+Write a program that reads a graph (from its input) and prints, either “This graph is not Eulerian.” or an Eulerian circuit of the graph (depending whether or not the graph is Eulerian).
 
 Input Format:
 - The names of the letters are single (uppercase or lowercase) letters.
