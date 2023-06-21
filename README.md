@@ -1,65 +1,53 @@
-# Binary Operation Parenthesization Project
+# Eulerian Circuit Project
 
-This C++ program implements a dynamic programming algorithm that examines a string of symbols and decides whether or not it is possible to parenthesize the string in such a way that the value of the resulting expression is a certain goal symbol. The program also outputs a parenthesized expression that fulfills the goal or states that no such parenthesization exists if that's the case.
+This project presents an efficient program that reads a graph from its input and determines whether the graph is Eulerian or not. If the graph is Eulerian, the program prints an Eulerian circuit of the graph. If it is not, the program simply prints "This graph is not Eulerian."
+
+## Description
+
+The program, written in C++, implements the necessary logic to evaluate the input graph. The graph is represented using an adjacency list structure. The main steps of the algorithm involve:
+
+1. Reading and constructing the graph from the input
+2. Checking if the graph is Eulerian (all vertices with non-zero degrees are connected and all vertices have even degrees)
+3. If the graph is Eulerian, constructing and printing the Eulerian circuit
+
+The Eulerian circuit is printed as a sequence of vertices that starts and ends in the vertex numbered 1. When the algorithm has to choose an edge, it chooses the edge with the smallest possible index.
+
+## Input Format
+
+The names of the vertices are single (uppercase or lowercase) letters.
+
+- The first line of the input contains the names of the vertices of the graph. Number the vertices in the order they appear in this line.
+- Each of the subsequent input lines contains an edge as a pair of two letters. Number every edge in the order it is read from the input.
+
+Example: 
+```
+acbfde 
+af 
+bd 
+df 
+ef 
+ba 
+de 
+dc 
+bf 
+bc
+```
+
+## Output Format
+
+- If the graph is Eulerian, the program prints the Eulerian circuit as a sequence of vertices that starts and ends in the vertex numbered 1. 
+- If the graph is not Eulerian, the program prints "GRAPH NOT EULERIAN".
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
-
-### Prerequisites
-
-You will need a C++ compiler (like g++ or clang++) installed on your system to run this code. If you don't have one already installed, you can get it by downloading from the official websites.
+You will need a C++ compiler installed on your system.
 
 ### Installing
 
 1. Clone the repo or download the .cpp file to your local system.
-2. Navigate to the directory containing the .cpp file in your terminal.
-3. Compile the file using your C++ compiler.
-
-For example, if you're using g++, type the following command and press enter:
-
-```bash
-g++ parenthesization.cpp -o parenthesization
-```
+2. Compile the file using your C++ compiler. 
 
 ### Usage
 
-You can then run the program using the following command:
-
-```bash
-./parenthesization
-```
-
-#### Input
-
-The first line contains a positive integer which defines the number of symbols. The second line contains these symbols. The last symbol is the “goal”. The following n lines make an nxn matrix that represents the results of the operations. The last line contains a sequence of characters for which you have to seek for a parenthesization.
-
-Sample input:
-
-```text
-3
-abc
-aac
-baa
-caa
-caaccb
-```
-
-#### Output
-
-The output will be a parenthesized expression yielding the goal if one exists. If no such parenthesization exists, it outputs "No parenthesization is possible."
-
-Sample outputs for the above input:
-
-```text
-(c((aa)((cc)b))
-(c(a(a((cc)b))))
-(((ca)a)((cc)b))
-(((ca)a)((cc)b))
-```
-
-## Code Description
-
-The code contains an `Operation` class that holds the data and methods needed to solve the problem. It reads the input, processes it, and outputs the result. The `showTime()` function implements the main part of the dynamic programming algorithm.
-
-The function `parenthesization()` outputs the final result: a parenthesized expression yielding the goal, or "No parenthesization possible." if no such parenthesization exists.
+- Run the compiled program. The input consists of a series of lines, the first of which contains the names of the vertices, and the subsequent lines containing the edges. 
+- The output will be either the Eulerian circuit or the message "GRAPH NOT EULERIAN", depending on the properties of the graph.
