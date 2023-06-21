@@ -32,7 +32,7 @@ You can then run the program using the following command:
 
 #### Input
 
-The first line contains a positive integer which defines the number of symbols. The second line contains these symbols. The following n lines make an nxn matrix that represents the results of the operations. The last line contains a sequence of characters for which you have to seek for a parenthesization.
+The first line contains a positive integer which defines the number of symbols. The second line contains these symbols. The last symbol is the “goal”. The following n lines make an nxn matrix that represents the results of the operations. The last line contains a sequence of characters for which you have to seek for a parenthesization.
 
 Sample input:
 
